@@ -1,6 +1,6 @@
 # Mohammed Ahmed Hassan — Portfolio & Blog
 
-Static site deployed via GitHub Pages.
+Static portfolio and blog deployed on Vercel.
 
 ## Structure
 
@@ -8,6 +8,7 @@ Static site deployed via GitHub Pages.
 portfolio-site/
 ├── index.html              # Home / portfolio
 ├── blog.html               # Blog listing
+├── vercel.json             # Vercel static hosting configuration
 ├── css/
 │   └── style.css           # Shared design system (all pages)
 ├── js/
@@ -28,7 +29,7 @@ portfolio-site/
 3. Write content inside `<div class="post-body">`.
 4. Update `post-footer` prev/next links.
 5. Add a card for it in `blog.html` (copy an existing `.post-card` block and set the correct `data-category` and `href`).
-6. Push to `main` — GitHub Actions deploys automatically.
+6. Push to `main` — Vercel deploys automatically after the GitHub repo is connected.
 
 ## Available post categories (for `data-category` on cards and filter buttons)
 
@@ -47,5 +48,11 @@ Replace `YOUR_FORM_ID` in `index.html` with your actual Formspree form ID.
 
 ## Deployment
 
-The `.github/workflows/static.yml` workflow deploys the entire repo root on every push to `main`.
-No build step required — everything is plain HTML, CSS, and JS.
+Deploy this repo as a Vercel project.
+
+- Framework Preset: `Other`
+- Build Command: leave empty
+- Output Directory: leave empty
+- Install Command: leave empty
+
+No build step is required because everything is plain HTML, CSS, and JS. Vercel will serve the repo root as the static site and redeploy automatically on pushes to `main`.
